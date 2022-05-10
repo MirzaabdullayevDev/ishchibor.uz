@@ -1,0 +1,91 @@
+  nav {
+      position: fixed;
+      z-index: 999;
+      transition: 0.5 !important;
+      top: 0;
+      background: #fff;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0px 2px 4px rgba(115, 115, 115, 0.1);
+  }
+
+  .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+  }
+
+  nav .nav_tools {
+      display: flex;
+      align-items: center;
+  }
+
+  nav .nav_tools .nav_profile,
+  nav .nav_tools .nav_call,
+  nav .nav_tools .nav_lang {
+      margin: 0 20px;
+  }
+
+  nav .nav_tools .nav_lang {
+      display: flex;
+      align-items: center;
+  }
+
+  nav .nav_tools .nav_lang span {
+      display: block;
+      width: 1px;
+      height: 16px;
+      margin: 0 12px;
+      background: #3F3F3F;
+  }
+
+  nav .nav_tools .nav_lang a {
+      color: #3F3F3F;
+      font-size: 16px;
+      line-height: 16px;
+  }
+
+  nav .nav_tools .nav_call .call_number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #3F3F3F;
+  }
+
+  nav .nav_tools .nav_call .call_number h4 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+  }
+
+  nav .nav_tools .nav_call .call_number i {
+      font-size: 14px;
+      margin-right: 8px;
+  }
+
+  nav .nav_tools .nav_call p {
+      text-align: center;
+      color: #737373;
+      font-weight: 300;
+      font-size: 12px;
+  }
+
+  nav .nav_tools .nav_profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #3F3F3F;
+  }
+
+  nav .nav_tools .nav_profile h4 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+  }
+
+  nav .nav_tools .nav_profile i {
+      font-size: 14px;
+      margin-right: 8px;
+  }

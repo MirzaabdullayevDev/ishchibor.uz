@@ -1,4 +1,5 @@
 const express = require('express')
+const chalk = require('chalk')
 const morgan = require('morgan')
 const db = require('./helper/db')
 const path = require('path')
@@ -44,14 +45,25 @@ app.use('/api/masters', mastersRouter)
 // MongoDB connection
 db(process.env.DB_HOST)
 
+
+
+
+
+
+// Navbar Logo Add and edit  
+const Logo = require('./routes/Navbar/Logo')
+app.use('/api/admin/navbar', Logo)
+
+
+
 // Server listening
 try {
-    const port = normalizePort(process.env.PORT || 3001)
+    const port = normalizePort(process.env.PORT || 5001)
     app.listen(port, () => {
-        console.log(`Backend side server working with ${port}`);
+        console.log(chalk.yellow.bgBlue(`Backend side server working with ${port}`));
     })
 } catch (error) {
-    console.error(error);
+    console.error(chalk.red.bgYellow(error));
 }
 
 // Normalize PORT function

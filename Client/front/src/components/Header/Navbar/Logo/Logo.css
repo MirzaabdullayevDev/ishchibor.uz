@@ -1,0 +1,6 @@
+/* Medium ≥768px */
+@media (max-width: 767px) {
+  header nav .logo img {
+    width: 140px;
+  }
+}

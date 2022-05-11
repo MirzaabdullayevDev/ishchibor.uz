@@ -4,7 +4,7 @@ const fileUpload = require('../../middleware/fileUpload')
 const { NavbarLogo } = require('../../controllers/Navbar')
 
 
-router.post('/logo', fileUpload.single("image"), NavbarLogo)
+router.route('/logo', fileUpload.single("image")).post(NavbarLogo)
 
 
 module.exports = router

@@ -1,21 +1,63 @@
 :root {
-    --primary-color: rgba(44, 35, 125, 1);
-    --orange-color: #EF760D;
+  --primary-color: rgba(44, 35, 125, 1);
+  --orange-color: #ef760d;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Proxima Nova', sans-serif;
+  font-family: "Proxima Nova", sans-serif;
 }
 
-.container {
-    margin: auto;
+/* media */
+@media (min-width: 1399px) {
+  .container {
     width: 1320px;
+    margin: auto;
+  }
+}
+
+/* XX-Large ≥1400px */
+@media (max-width: 1399px) {
+  .container {
+    margin: auto;
+    width: 1140px;
+  }
+}
+
+/* X-Large ≥1200px */
+@media (max-width: 1199px) {
+  .container {
+    margin: auto;
+    width: 960px;
+  }
+}
+
+/* Large ≥992px */
+@media (max-width: 991px) {
+  .container {
+    margin: auto;
+    width: 720px;
+  }
+}
+/* Medium ≥768px */
+@media (max-width: 767px) {
+  .container {
+    margin: auto;
+    width: 540px;
+  }
+}
+
+/* Small ≥576px */
+@media (max-width: 575px) {
+  .container {
+    margin: auto;
+    width: 90%;
+  }
 }

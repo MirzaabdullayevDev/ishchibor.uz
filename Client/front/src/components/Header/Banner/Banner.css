@@ -1,34 +1,69 @@
-   .banner {
-       background: url(https://www.build-review.com/wp-content/uploads/2019/07/MOST-TRUSTED-BUILDER.png);
-       background-repeat: no-repeat;
-       background-size: cover;
-       background-position-y: 30px;
-   }
+.banner {
+  background: url(https://www.build-review.com/wp-content/uploads/2019/07/MOST-TRUSTED-BUILDER.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 30px;
+}
 
-   .banner .banner_main {
-       background: #00000068;
-       padding: 200px 0;
-   }
+.banner .banner_main {
+  background: #00000068;
+  padding: 200px 0;
+}
 
-   .banner h1 {
-       color: #fff;
-       font-size: 46px;
-       width: 50%;
-       margin-bottom: 30px;
-   }
+.banner h1 {
+  color: #fff;
+  font-size: 46px;
+  width: 50%;
+  margin-bottom: 30px;
+}
 
-   .banner p {
-       color: #fff;
-       font-size: 20px;
-       margin-bottom: 40px;
-   }
+.banner p {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
 
-   .banner button {
-       cursor: pointer;
-       background: var(--primary-color);
-       font-size: 16px;
-       color: #fff;
-       border: none;
-       border-radius: 8px;
-       padding: 12px 35px;
-   }
+.banner button {
+  cursor: pointer;
+  background: var(--primary-color);
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 35px;
+}
+
+/* Large ≥992px */
+@media (max-width: 991px) {
+  header .banner h1 {
+    font-size: 30px;
+    width: 60%;
+  }
+
+  header .banner p {
+    font-size: 16px;
+  }
+}
+
+/* Medium ≥768px */
+@media (max-width: 767px) {
+  header .banner h1 {
+    font-size: 30px;
+    width: 70%;
+  }
+  header .banner p {
+    font-size: 14px;
+  }
+}
+
+/* Small ≥576px */
+@media (max-width: 575px) {
+  header .banner h1 {
+    font-size: 24px;
+    width: 90%;
+  }
+
+  header .banner p {
+    font-size: 14px;
+  }
+}

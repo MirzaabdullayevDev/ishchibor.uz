@@ -34,3 +34,14 @@ exports.NavbarLogo = async (req, res) => {
         res.status(404).json({ message: "Logo Upload Required!!!", data: Logo })
     }
 }
+
+
+exports.NavbarLogoEdit = async (req, res) => {
+    const Id = req.params.id
+    const { image } = await NavbarLogo.findById(Id)
+    const FindLogo = await NavbarLogo.findById(Id)
+    toDelete(image)
+    await NavbarLogo.findByIdAndDelete(FindLogo)
+    const UpdateImage = req.file.filename
+    await NavbarLogo.findByIdAndUpdate(req.params.id, UpdateImage)
+}

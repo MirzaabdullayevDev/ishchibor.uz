@@ -56,6 +56,11 @@ app.use('/api/admin/navbar', Logo)
 
 
 
+// Category Add
+const Category = require('./routes/Category/Category')
+app.use('/api/admin/category', Category)
+
+
 // Server listening
 try {
     const port = normalizePort(process.env.PORT || 5001)

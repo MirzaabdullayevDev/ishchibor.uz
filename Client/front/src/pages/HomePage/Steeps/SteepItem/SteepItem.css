@@ -1,0 +1,38 @@
+.steeps_main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.steeps_main .call-center {
+    position: absolute;
+    left: 31%;
+    top: 15%;
+}
+
+.steeps_main .worker {
+    position: absolute;
+    left: 65%;
+    top: 15%;
+}
+
+.steeps_main .steep_item {
+    padding: 0 60px;
+    text-align: center;
+    width: 33%;
+}
+
+.steeps_main .steep_item h2 {
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 146px;
+    color: #2C237D;
+}
+
+.steeps_main .steep_item p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #3F3F3F;
+}

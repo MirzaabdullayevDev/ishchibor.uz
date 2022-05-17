@@ -31,7 +31,7 @@ export default function CategoryItems() {
   ];
 
   return (
-    <div class="category_items">
+    <div className="category_items">
       {categories.map((item, index) => (
         <div className="category_item" key={index}>
           <div className="category_item_img">

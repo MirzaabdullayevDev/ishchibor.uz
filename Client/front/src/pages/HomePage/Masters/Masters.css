@@ -1,0 +1,10 @@
+.top_masters {
+    padding-bottom: 60px;
+    background: #f0f6fa;
+}
+
+.masters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

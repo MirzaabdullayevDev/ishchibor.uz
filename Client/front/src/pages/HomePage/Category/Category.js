@@ -4,10 +4,10 @@ import "./Category.css";
 
 export default function Category() {
   return (
-    <section class="category">
-      <div class="container">
-        <div class="category_title">
-          <h2 class="section_title">Предложите ваше задание</h2>
+    <section className="category">
+      <div className="container">
+        <div className="category_title">
+          <h2 className="section_title">Предложите ваше задание</h2>
         </div>
         <CategoryItems />
       </div>

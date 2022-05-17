@@ -1,0 +1,19 @@
+.about {
+    padding-bottom: 60px;
+}
+
+.about .about_main {
+    display: flex;
+}
+
+.about .about_main .about_info {
+    width: 40%;
+    padding-right: 100px;
+}
+
+.about .about_main .about_info p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3F3F3F;
+}

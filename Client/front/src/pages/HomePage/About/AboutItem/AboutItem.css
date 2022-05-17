@@ -1,0 +1,22 @@
+.about .about_main .about_items {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.about .about_main .about_items .about_item {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    margin-bottom: 20px;
+    padding-right: 50px;
+}
+
+.about .about_main .about_items .about_item h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 20px;
+    color: #3F3F3F;
+}

@@ -4,7 +4,7 @@ import "./Logo.css";
 
 export default function Logo() {
   return (
-    <a href="/" class="logo">
+    <a href="/" className="logo">
       <img src={imgLogo} alt="logo" />
     </a>
   );

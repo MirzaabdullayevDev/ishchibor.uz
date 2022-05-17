@@ -1,0 +1,22 @@
+footer {
+    padding: 30px 0;
+    background: #fff;
+    box-shadow: 0 0px 2px 4px rgba(115, 115, 115, 0.1);
+}
+
+footer .footer_main .footer_end h4 {
+    text-decoration: underline;
+}
+
+footer .footer_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer_main h4 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3F3F3F;
+}

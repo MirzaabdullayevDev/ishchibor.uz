@@ -6,8 +6,8 @@ import NavTools from "./NavTools/NavTools";
 const Navbar = () => {
   return (
     <nav>
-      <div class="container">
-        <div class="navbar">
+      <div className="container">
+        <div className="navbar">
           <Logo />
           <NavTools/>
         </div>

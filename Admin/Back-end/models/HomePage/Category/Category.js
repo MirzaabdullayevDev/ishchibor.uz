@@ -8,7 +8,7 @@ const Categories = Schema({
     },
     image: {
         type: String,
-        
+        required: true
     },
 
 

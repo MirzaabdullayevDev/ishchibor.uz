@@ -1,4 +1,5 @@
 const Category = require('../models/HomePage/Category/Category')
+const toDelete = require('../middleware/toDelete')
 
 exports.Category = async (req, res) => {
     if (req.file) {
@@ -9,15 +10,35 @@ exports.Category = async (req, res) => {
         })
         await CreatCategory.save()
         res.status(201).json({ message: "Success" })
-    } else { 
+    } else {
         res.send("Error in create category")
     }
 }
 
-exports.CategoryDelete = async (req , res)=>{
+exports.CategoryEdit = async (req, res) => {
+    const category = await Category.findById(req.params.id)
 
-  await Category.findByIdAndDelete(req.params.id)
-  res.status(201).json({ message: "Success" })
+    const imgCategory = req.body
+
+    if (req.file) {
+        toDelete(category.image);
+        imgCategory.image = req.file.filename
+    }
+
+    const editCategory = await Category.findByIdAndUpdate(req.params.id, imgCategory)
+
+
+    res.status(201).json({ message: "Success", editCategory })
+
+}
+
+
+
+exports.CategoryDelete = async (req, res) => {
+
+    await Category.findByIdAndDelete(req.params.id)
+
+    res.status(201).json({ message: "Success" })
 
 }
 

@@ -50,9 +50,12 @@ db(process.env.DB_HOST)
 
 
 
-// Navbar Logo Add and edit  
+// Navbar Logo Add and edit and delete 
 const Logo = require('./routes/Navbar/Logo')
 app.use('/api/admin/navbar', Logo)
+// Navbar Menu Add and edit and delete
+const Menu = require('./routes/Navbar/Menu')
+app.use('/api/admin/navbar', Menu)
 
 
 

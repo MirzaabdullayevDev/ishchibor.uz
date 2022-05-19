@@ -1,6 +1,11 @@
 const NavbarLogo = require('../models/HomePage/Navbar/NavbarLogo')
 const toDelete = require('../middleware/toDelete')
 
+
+
+
+// Navbar Logo
+
 exports.NavbarLogo = async (req, res) => {
     if (req.file) {
         const navbarLogo = new NavbarLogo({
@@ -51,4 +56,13 @@ exports.NavbarLogoDelete = async (req, res) => {
     await NavbarLogo.findByIdAndDelete(req.params.id)
     const Logo = await NavbarLogo.find()
     res.status(200).json({ message: "Success", data: Logo })
+}
+
+
+
+
+// Navbar Menu
+
+exports.NavbarMenuAdd = async (req, res) => {
+    console.log(req.body);
 }

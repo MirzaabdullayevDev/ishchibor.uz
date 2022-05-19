@@ -61,6 +61,11 @@ const Category = require('./routes/Category/Category')
 app.use('/api/admin/category', Category)
 
 
+// Sequence
+const Sequence = require('./routes/Sequence/Sequence')
+app.use('/api/admin/sequence', Sequence)
+
+
 // Server listening
 try {
     const port = normalizePort(process.env.PORT || 5001)

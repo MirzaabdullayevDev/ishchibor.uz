@@ -4,6 +4,7 @@ const toDelete = require('../middleware/toDelete')
 exports.Category = async (req, res) => {
     if (req.file) {
         const { name } = req.body
+        
         const CreatCategory = new Category({
             name,
             image: req.file.filename

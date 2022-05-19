@@ -1,6 +1,5 @@
 const NavbarLogo = require('../models/HomePage/Navbar/NavbarLogo')
 const toDelete = require('../middleware/toDelete')
-const chalk = require('chalk')
 
 exports.NavbarLogo = async (req, res) => {
     if (req.file) {
@@ -35,13 +34,21 @@ exports.NavbarLogo = async (req, res) => {
     }
 }
 
-
 exports.NavbarLogoEdit = async (req, res) => {
-    const Id = req.params.id
-    const { image } = await NavbarLogo.findById(Id)
-    const FindLogo = await NavbarLogo.findById(Id)
-    toDelete(image)
-    await NavbarLogo.findByIdAndDelete(FindLogo)
-    const UpdateImage = req.file.filename
-    await NavbarLogo.findByIdAndUpdate(req.params.id, UpdateImage)
+    const logo = await NavbarLogo.findById(req.params.id)
+    const updateLogo = req.body
+    if (req.file) {
+        toDelete(logo.image);
+        updateLogo.image = req.file.filename
+    }
+    const editLogo = await NavbarLogo.findByIdAndUpdate(req.params.id, updateLogo)
+    res.status(201).json({ message: "Success", data: editLogo })
+}
+
+exports.NavbarLogoDelete = async (req, res) => {
+    const Id = await NavbarLogo.findById(req.params.id)
+    toDelete(Id.image)
+    await NavbarLogo.findByIdAndDelete(req.params.id)
+    const Logo = await NavbarLogo.find()
+    res.status(200).json({ message: "Success", data: Logo })
 }

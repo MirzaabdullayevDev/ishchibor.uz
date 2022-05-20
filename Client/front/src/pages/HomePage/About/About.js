@@ -23,9 +23,7 @@ const About = () => {
                             гарантия.
                         </p>
                     </div>
-
                     <AboutItem />
-
                 </div>
             </div>
         </section>

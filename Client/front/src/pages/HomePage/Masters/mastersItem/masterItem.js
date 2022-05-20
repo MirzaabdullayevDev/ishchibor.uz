@@ -1,12 +1,12 @@
 import React from 'react';
 import "./masterItem.css"
 
-const MasterItem = () => {
+const MasterItem = ({ masterInfo }) => {
     return (
         <div className="master_item">
             <div className="master_info">
                 <div className="master_info_img">
-                    <img src="https://avatars.mds.yandex.net/get-ydo/3937212/2a0000017893814d9f4434550ae1be4ad5e3/face_mini"
+                    <img src={masterInfo.image}
                         alt="img" />
                 </div>
                 <div className="master_info_rate">
@@ -20,20 +20,16 @@ const MasterItem = () => {
             </div>
             <div className="master_about">
                 <div className="master_about_title">
-                    <h2>Rafael Xamitovich Vaxitov</h2>
+                    <h2>{masterInfo.name}</h2>
                     <button>
                         <i className="fa-solid fa-ellipsis-vertical"></i>
                     </button>
                 </div>
                 <div className="state">
-                    <p className="location">Olmaliq</p>
+                    <p className="location">{masterInfo.location}</p>
                 </div>
                 <p className="masterinfo">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                    voluptates, fugiat minus explicabo, recusandae quis dolorum sunt
-                    expedita saepe iure provident eum sequi dolorem possimus
-                    corrupti laudantium. Consequuntur natus, deserunt illo,
-                    architecto?
+                    {masterInfo.info}
                 </p>
                 <div className="works">
                     <div className="work_item">

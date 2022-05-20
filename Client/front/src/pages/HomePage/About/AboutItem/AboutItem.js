@@ -6,32 +6,36 @@ import hours from '../../../../images/24-hours.png'
 import alarm from '../../../../images/alarm.png'
 
 const AboutItem = () => {
+    const aboutItem = [
+        {
+            image: quality,
+            aboutInfo: "Более 20 лет работы в этом сегменте сервиса"
+        },
+        {
+            image: surface1,
+            aboutInfo: "Качественные деталей и расходных материалов"
+        },
+        {
+            image: hours,
+            aboutInfo: "Круглосуточный выезд к клиенту в течение 1–1,5 часов"
+        },
+        {
+            image: alarm,
+            aboutInfo: "Выезд 30 минут при срочном ремонте"
+        },
+    ]
     return (
         <div className="about_items">
-            <div className="about_item">
-                <div className="about_item_img">
-                    <img src={quality} alt="png" />
-                </div>
-                <h4 className="about_item_title">Более 20 лет работы в этом сегменте сервиса</h4>
-            </div>
-            <div className="about_item">
-                <div className="about_item_img">
-                    <img src={surface1} alt="png" />
-                </div>
-                <h4 className="about_item_title">Качественные деталей и расходных материалов</h4>
-            </div>
-            <div className="about_item">
-                <div className="about_item_img">
-                    <img src={hours} alt="png" />
-                </div>
-                <h4 className="about_item_title">Круглосуточный выезд к клиенту в течение 1–1,5 часов</h4>
-            </div>
-            <div className="about_item">
-                <div className="about_item_img">
-                    <img src={alarm} alt="png" />
-                </div>
-                <h4 className="about_item_title">Выезд 30 минут при срочном ремонте</h4>
-            </div>
+            {
+                aboutItem.map((item, index) => (
+                    <div className="about_item" key={index}>
+                        <div className="about_item_img">
+                            <img src={item.image} alt="png" />
+                        </div>
+                        <h4 className="about_item_title">{item.aboutInfo}</h4>
+                    </div>
+                ))
+            }
         </div>
     );
 }
